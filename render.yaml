@@ -22,9 +22,13 @@ services:
   - type: web
     name: codemeet-web
     env: node
-    buildCommand: npm install && npm run build
-    staticPublishPath: ./dist
+    buildCommand: |
+      cd client
+      npm install
+      npm run build
+    staticPublishPath: ./client/dist
     envVars:
       - key: VITE_API_URL
+        value: https://codemeet-api.onrender.com
         value: https://codemeet-api.onrender.com
     rootDir: client
