@@ -1,0 +1,20 @@
+{
+  "name": "codemeet",
+  "version": "1.0.0",
+  "description": "CodeSync is a modern web application built on the MERN stack, designed to provide seamless virtual collaboration through real-time video meetings and collaborative coding environments. It integrates video conferencing, live chat, and a shared online compiler into a single platform.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/harshiii456/Codemeet.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/harshiii456/Codemeet/issues"
+  },
+  "homepage": "https://github.com/harshiii456/Codemeet#readme"
+}
