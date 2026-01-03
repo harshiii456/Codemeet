@@ -1,0 +1,30 @@
+services:
+  - type: web
+    name: codemeet-api
+    env: node
+    buildCommand: npm install
+    startCommand: node index.js
+    envVars:
+      - key: MONGODB_URI
+        sync: false
+      - key: CORS_ORIGIN
+        value: https://codemeet-web.onrender.com
+      - key: ACCESS_TOKEN_SECRET
+        generateValue: true
+      - key: REFRESH_TOKEN_SECRET
+        generateValue: true
+      - key: ACCESS_TOKEN_EXPIRY
+        value: 1d
+      - key: REFRESH_TOKEN_EXPIRY
+        value: 10d
+    rootDir: server
+
+  - type: web
+    name: codemeet-web
+    env: node
+    buildCommand: npm install && npm run build
+    staticPublishPath: ./dist
+    envVars:
+      - key: VITE_API_URL
+        value: https://codemeet-api.onrender.com
+    rootDir: client
