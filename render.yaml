@@ -2,7 +2,9 @@ services:
   - type: web
     name: codemeet-api
     env: node
-    buildCommand: npm install
+    buildCommand: |
+      npm install
+      npm run build
     startCommand: node index.js
     envVars:
       - key: MONGODB_URI
@@ -17,7 +19,10 @@ services:
         value: 1d
       - key: REFRESH_TOKEN_EXPIRY
         value: 10d
+      - key: NODE_ENV
+        value: production
     rootDir: server
+    autoDeploy: true
 
   - type: web
     name: codemeet-web
@@ -29,4 +34,7 @@ services:
     envVars:
       - key: VITE_API_URL
         value: https://codemeet-api.onrender.com
+      - key: NODE_ENV
+        value: production
     rootDir: client
+    autoDeploy: true
