@@ -1,8 +1,8 @@
 
 
-# CodeSync - Real-Time Collaborative Coding & Video Meeting Platform
+# CodeMeet - Real-Time Collaborative Coding & Video Meeting Platform
 
-CodeSync is a modern web application built on the MERN stack, designed to provide seamless virtual collaboration through real-time video meetings and collaborative coding environments. It integrates video conferencing, live chat, and a shared online compiler into a single platform.
+CodeMeet is a modern web application built on the MERN stack, designed to provide seamless virtual collaboration through real-time video meetings and collaborative coding environments. It integrates video conferencing, live chat, and a shared online compiler into a single platform.
 
 ---
 
@@ -62,9 +62,6 @@ Ensure you have the following installed:
 ### Backend Setup
 
 1. Clone the repository:
-
-   ```bash
-   git clone https://github.com/shoibk897/CodeSync.git
    ```
 
 2. Navigate to the backend directory:
